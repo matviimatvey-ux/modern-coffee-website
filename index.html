@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>web002 • Interactive Landing</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<!-- Top bar -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="#">matvey<span>.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#features">Özellikler</a>
+      <a href="#pricing">Fiyat</a>
+      <a href="#faq">SSS</a>
+      <button class="btn btn--ghost" id="openModalBtn">İletişim</button>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Tema değiştir" title="Tema">
+        🌙
+      </button>
+
+      <button class="icon-btn burger" id="burger" aria-label="Menü" title="Menü">
+        ☰
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<main>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="badge">Frontend Portfolio Project</p>
+        <h1>Modern Landing Page<br><span>+ JavaScript Etkileşim</span></h1>
+        <p class="lead">
+          Tema değişimi, mobil menü, fiyat toggle ve modal dahil.
+          İş başvurusu için “canlı demo” gibi duran temiz bir proje.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#pricing">Planları Gör</a>
+          <button class="btn btn--ghost" id="openModalBtn2">Demo İletişim</button>
+        </div>
+
+        <div class="mini-stats">
+          <div class="stat">
+            <b>4</b><span>JS Feature</span>
+          </div>
+          <div class="stat">
+            <b>100%</b><span>Responsive</span>
+          </div>
+          <div class="stat">
+            <b>Clean</b><span>UI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="card">
+          <div class="card__top">
+            <p class="card__title">Quick Preview</p>
+            <p class="card__sub">Toggle + Modal + Theme</p>
+          </div>
+          <div class="card__body">
+            <div class="fake-chart"></div>
+            <div class="fake-row"></div>
+            <div class="fake-row"></div>
+            <div class="fake-row"></div>
+          </div>
+        </div>
+        <p class="hint">İpucu: sağ üstten 🌙 ile tema değiştir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2>Özellikler</h2>
+      <p class="muted">Bu proje iş başvurusu için: temiz HTML/CSS + pratik JS.</p>
+
+      <div class="grid">
+        <article class="feature">
+          <h3>🌙 Tema Switch</h3>
+          <p>Dark/Light geçiş + localStorage ile kaydetme.</p>
+        </article>
+        <article class="feature">
+          <h3>📱 Mobil Menü</h3>
+          <p>Hamburger menü, dışarı tıklayınca kapanır.</p>
+        </article>
+        <article class="feature">
+          <h3>💳 Pricing Toggle</h3>
+          <p>Aylık/Yıllık fiyatlar JS ile değişir.</p>
+        </article>
+        <article class="feature">
+          <h3>🪟 Modal</h3>
+          <p>Butonla açılır, ESC ve dış tık ile kapanır.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="pricing__top">
+        <div>
+          <h2>Fiyatlandırma</h2>
+          <p class="muted">Toggle ile fiyatların değiştiğini gör.</p>
+        </div>
+
+        <div class="toggle">
+          <span>Aylık</span>
+          <button class="switch" id="billingSwitch" aria-label="Billing toggle">
+            <span class="knob"></span>
+          </button>
+          <span>Yıllık <em>(-20%)</em></span>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <div class="plan">
+          <h3>Starter</h3>
+          <p class="price"><span class="currency">$</span><span data-price="starter" class="amount">9</span><span class="per">/mo</span></p>
+          <ul>
+            <li>Responsive UI</li>
+            <li>Basic sections</li>
+            <li>Clean code</li>
+          </ul>
+          <button class="btn btn--ghost openModal">Başla</button>
+        </div>
+
+        <div class="plan plan--active">
+          <div class="tag">Popular</div>
+          <h3>Pro</h3>
+          <p class="price"><span class="currency">$</span><span data-price="pro" class="amount">19</span><span class="per">/mo</span></p>
+          <ul>
+            <li>All Starter</li>
+            <li>Theme + Toggle</li>
+            <li>Modal + Menu</li>
+          </ul>
+          <button class="btn openModal">Satın Al</button>
+        </div>
+
+        <div class="plan">
+          <h3>Business</h3>
+          <p class="price"><span class="currency">$</span><span data-price="business" class="amount">39</span><span class="per">/mo</span></p>
+          <ul>
+            <li>All Pro</li>
+            <li>Extra sections</li>
+            <li>Deploy ready</li>
+          </ul>
+          <button class="btn btn--ghost openModal">Teklif Al</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>SSS</h2>
+      <div class="faq">
+        <details>
+          <summary>Bu proje neyi gösteriyor?</summary>
+          <p>Temiz HTML/CSS + basit ama etkili JavaScript etkileşimleri.</p>
+        </details>
+        <details>
+          <summary>GitHub Pages ile yayınlanır mı?</summary>
+          <p>Evet. Repo → Settings → Pages → Deploy from branch → main / root → Save.</p>
+        </details>
+        <details>
+          <summary>LocalStorage ne işe yarıyor?</summary>
+          <p>Tema seçimini hatırlar. Sayfayı kapatsan bile aynı tema gelir.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> matvey • web002</p>
+      <a href="#top" class="muted">Yukarı</a>
+    </div>
+  </footer>
+</main>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__header">
+      <h3 id="modalTitle">İletişim / Demo</h3>
+      <button class="icon-btn" id="closeModalBtn" aria-label="Kapat">✕</button>
+    </div>
+
+    <form class="modal__form" id="contactForm">
+      <label>
+        Ad Soyad
+        <input type="text" placeholder="Matvey" required />
+      </label>
+      <label>
+        Email
+        <input type="email" placeholder="mail@example.com" required />
+      </label>
+      <label>
+        Mesaj
+        <textarea rows="4" placeholder="Merhaba, proje hakkında..." required></textarea>
+      </label>
+
+      <button class="btn" type="submit">Gönder</button>
+      <p class="muted small">Not: Bu demo form göndermez, sadece UI için.</p>
+    </form>
+  </div>
+</div>
+
+<script src="script.js">
+  // Helpers
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+  // YEAR
+  $("#year").textContent = new Date().getFullYear();
+
+  // THEME (dark/light) + localStorage
+  const THEME_KEY = "web002-theme";
+  const themeToggle = $("#themeToggle");
+
+  function setTheme(mode) {
+    document.documentElement.setAttribute("data-theme", mode);
+    localStorage.setItem(THEME_KEY, mode);
+    themeToggle.textContent = mode === "light" ? "☀️" : "🌙";
+  }
+
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme) setTheme(savedTheme);
+  else setTheme("dark");
+
+  themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    setTheme(current === "light" ? "dark" : "light");
+  });
+
+  // MOBILE MENU
+  const burger = $("#burger");
+  const nav = $("#nav");
+
+  function closeMenu() {
+    nav.classList.remove("is-open");
+  }
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("is-open");
+  });
+
+  document.addEventListener("click", (e) => {
+    const clickedInside = nav.contains(e.target) || burger.contains(e.target);
+    if (!clickedInside) closeMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 920) closeMenu();
+  });
+
+  // PRICING TOGGLE (monthly/yearly)
+  const billingSwitch = $("#billingSwitch");
+  const prices = {
+    monthly: { starter: 9, pro: 19, business: 39 },
+    yearly:  { starter: 9 * 12 * 0.8, pro: 19 * 12 * 0.8, business: 39 * 12 * 0.8 } // -20%
+  };
+
+  let isYearly = false;
+
+  function renderPrices() {
+    const mode = isYearly ? "yearly" : "monthly";
+    $$("[data-price]").forEach(el => {
+      const key = el.getAttribute("data-price");
+      const value = prices[mode][key];
+      el.textContent = mode === "yearly" ? Math.round(value) : value;
+    });
+
+    $$(".per").forEach(el => el.textContent = isYearly ? "/yr" : "/mo");
+    billingSwitch.classList.toggle("is-yearly", isYearly);
+  }
+
+  billingSwitch.addEventListener("click", () => {
+    isYearly = !isYearly;
+    renderPrices();
+  });
+
+  renderPrices();
+
+  // MODAL
+  const modal = $("#modal");
+  const backdrop = $("#modalBackdrop");
+  const closeModalBtn = $("#closeModalBtn");
+
+  function openModal() {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    closeMenu();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  $("#openModalBtn").addEventListener("click", openModal);
+  $("#openModalBtn2").addEventListener("click", openModal);
+  $$(".openModal").forEach(b => b.addEventListener("click", openModal));
+
+  backdrop.addEventListener("click", closeModal);
+  closeModalBtn.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+
+  // Fake form submit
+  $("#contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Demo form ✅ (gerçek gönderim yok)");
+    closeModal();
+  });
+
+</script>
+</body>
+</html>
