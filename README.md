@@ -1,5 +1,8 @@
 Web002 – Interactive Landing Page
 
+Live Demo
+👉 https://matviimatvey-ux.github.io/web002/
+
 Modern responsive landing page built with pure HTML5 and CSS3.
 
 Live Demo
