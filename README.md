@@ -1,7 +1,7 @@
 Web002 – Interactive Landing Page
 
 Live Demo
-👉 https://matviimatvey-ux.github.io/web002/
+👉 [https://matviimatvey-ux.github.io/web002/](https://matviimatvey-ux.github.io/modern-coffee-website/)
 
 Modern responsive landing page built with pure HTML5 and CSS3.
 
